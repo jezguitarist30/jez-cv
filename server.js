@@ -94,8 +94,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var zone_js_dist_zone_node__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zone_js_dist_zone_node__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * *** NOTE ON IMPORTING FROM ANGULAR AND NGUNIVERSAL IN THIS FILE ***
  *
@@ -114,11 +112,10 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-
 // Express server
 const app = express__WEBPACK_IMPORTED_MODULE_1__();
 const PORT = process.env.PORT || 4000;
-const DIST_FOLDER = Object(path__WEBPACK_IMPORTED_MODULE_2__["join"])(process.cwd(), 'dist/browser');
+const DIST_FOLDER = process.cwd();
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap } = __webpack_require__(129);
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
